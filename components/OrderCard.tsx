@@ -14,8 +14,8 @@ export default function OrderCard(props: Order & { statusColor: string }) {
       </div>
       <div className="app-card__item">
         <span className="app-card__item-label">Status</span>
-        <span className="app-l-flex-row app-l-flex-row__align-center">
-          <i className="app-status-icon app-h-mr-1" style={{ backgroundColor: statusColor }}></i>{" "}
+        <span className="app-status">
+          <i className="app-status__icon" style={{ backgroundColor: statusColor }}></i>{" "}
           {order.orderStatus}
         </span>
       </div>

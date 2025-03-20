@@ -1,10 +1,18 @@
 @use "./variables" as *;
 
-.app-status-icon {
-  display: inline-block;
-  width: $size-base * 3;
-  height: $size-base * 3;
-  border-radius: 50%;
-  background: #11b174;
-  border: 2px solid rgba(#fff, 0.24);
+.app-status {
+  line-height: 1;
+  letter-spacing: 0.3px;
+  font-size: $fontSize-small;
+  display: flex;
+  align-items: center;
+  gap: $size-base;
+  &__icon {
+    display: inline-block;
+    width: $size-base * 3;
+    height: $size-base * 3;
+    border-radius: 50%;
+    background: #11b174;
+    border: 2px solid rgba(#fff, 0.24);
+  }
 }

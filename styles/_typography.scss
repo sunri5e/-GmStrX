@@ -2,6 +2,9 @@
 
 h1,
 .h1 {
+  color: #fff;
   font-size: $fontSize-largest;
-  line-height: 1.16;
+  font-weight: $fontWeight-bold;
+  line-height: 1;
+  letter-spacing: 0.6px;
 }

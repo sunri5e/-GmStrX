@@ -7,10 +7,12 @@
   grid-gap: $size-base * 6 $size-base;
   border-radius: var(--radius-16, 16px);
   background: #1f242c;
+  line-height: 1;
   &__item {
     display: flex;
     flex-direction: column;
     gap: $size-base;
+    letter-spacing: 0.36px;
     &:nth-child(4n) {
       position: relative;
       &::after {
@@ -25,8 +27,8 @@
     }
     &-label {
       font-size: $fontSize-small;
-
       color: $color-text-secondary;
+      letter-spacing: 0.3px;
     }
   }
 }

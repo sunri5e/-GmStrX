@@ -23,7 +23,7 @@ export default function RootLayout({
       <body className={`${robotoSans.variable}`}>
         <Header />
         <div className="app-l-main">
-          <main className="app-l-container app-h-pt-13">{children}</main>
+          <main className="app-l-container">{children}</main>
         </div>
       </body>
     </html>

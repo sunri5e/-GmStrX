@@ -4,20 +4,24 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: $size-base * 11;
-  background: #fff;
   line-height: 1;
-  padding: 0 $size-base * 3;
+  letter-spacing: 0.36px;
   border: none;
-  border-radius: 20px;
-  transition: color 0.2s;
-  color: rgba(#000, 0.8);
+  background: none;
   cursor: pointer;
-  &:hover {
-    color: #000;
-  }
   &__text {
     position: relative;
+  }
+  &--regular {
+    color: rgba(#000, 0.8);
+    transition: color 0.2s;
+    border-radius: 20px;
+    padding: 0 $size-base * 3;
+    height: $size-base * 11;
+    background: #fff;
+    &:hover {
+      color: #000;
+    }
   }
   &--w100 {
     width: 100%;
@@ -25,6 +29,10 @@
   &--nav {
     height: $size-base * 8;
     font-weight: $fontWeight-bold;
+  }
+  &--with-icon {
+    width: $size-base * 6;
+    height: $size-base * 6;
   }
   &-group {
     * + * {
