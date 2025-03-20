@@ -28,3 +28,9 @@ export function generateOrders(count: number): Array<Order> {
     };
   });
 }
+
+export const colorMap = {
+  Pending: "#FFC107",
+  Success: "#28A745",
+  Failed: "#DC3545",
+};

@@ -1,25 +1,15 @@
 import Link from "next/link";
 import { Order, OrderStatus } from "@/utils/types";
-import { generateOrders } from "@/utils/helperFuncs";
+import { colorMap } from "@/utils/helpersAndConsts";
 import OrderCard from "@/components/OrderCard";
 import BackButton from "@/components/BackButton";
 
-const colorMap = {
-  Pending: "#FFC107",
-  Success: "#28A745",
-  Failed: "#DC3545",
-};
-
 export default async function Orders() {
   let orders: Order[] = [];
-  await fetch("http://localhost:8000/orders")
+  await fetch("https://my-json-server.typicode.com/sunri5e/-GmStrX/orders")
     .then((res) => res.json())
     .then((data) => {
       orders = data;
-    })
-    .catch((err) => {
-      console.error(err);
-      orders = generateOrders(10);
     });
 
   return (

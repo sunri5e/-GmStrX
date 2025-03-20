@@ -2,6 +2,7 @@ import { Order } from "@/utils/types";
 
 export default function OrderCard(props: Order & { statusColor: string }) {
   const { statusColor, ...order } = props;
+
   return (
     <div className="app-card">
       <div className="app-card__item">
