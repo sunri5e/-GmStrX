@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { OrderStatus } from "@/utils/types";
+import { Order, OrderStatus } from "@/utils/types";
 import { generateOrders } from "@/utils/helperFuncs";
 import OrderCard from "@/components/OrderCard";
 import BackButton from "@/components/BackButton";
@@ -10,8 +10,18 @@ const colorMap = {
   Failed: "#DC3545",
 };
 
-export default function Orders() {
-  const orders = generateOrders(10);
+export default async function Orders() {
+  let orders: Order[] = [];
+  await fetch("http://localhost:8000/orders")
+    .then((res) => res.json())
+    .then((data) => {
+      orders = data;
+    })
+    .catch((err) => {
+      console.error(err);
+      orders = generateOrders(10);
+    });
+
   return (
     <>
       <div className="app-l-flex-row app-l-flex-row__align-center">
@@ -19,7 +29,7 @@ export default function Orders() {
         <h1>Orders</h1>
       </div>
       <div className="app-h-mt-3">
-        {orders.map((order, i) => (
+        {orders.map((order: Order, i: number) => (
           <Link
             href={`/orders/${order.orderId}`}
             className={`app-h-block ${i > 0 ? "app-h-mt-3" : ""}`}

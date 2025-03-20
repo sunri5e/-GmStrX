@@ -2,16 +2,21 @@ import { Order } from "./types";
 
 export function generateOrders(count: number): Array<Order> {
   const statuses = ["Pending", "Success", "Failed"];
-  const games = ["Game 1", "Game 2", "Game 3", "Game 4"];
+  const games = ["Shadow Quest", "Cyber Drive", "Arcane Realm", "Galactic War", "Dungeon Run"];
 
   return Array.from({ length: count }, () => {
-    const orderId = (Math.floor(Math.random() * 1000) + 100).toString();
-    const gameID = (Math.floor(Math.random() * 10000) + 1000).toString();
+    const orderId = (Math.floor(Math.random() * 100000) + 100).toString();
+    const gameID = (Math.floor(Math.random() * 10000000000) + 1000).toString();
     const orderDate = new Date(
       2024,
       Math.floor(Math.random() * 12),
       Math.floor(Math.random() * 28) + 1,
-    ).toLocaleDateString("en-GB");
+    )
+      .toISOString()
+      .split("T")[0]
+      .split("-")
+      .reverse()
+      .join(".");
 
     return {
       orderId,
