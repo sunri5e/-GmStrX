@@ -2,6 +2,7 @@
 @use "_variables" as *;
 
 @include generateIndentation("app-h-mt", $indentationSteps, margin-top);
+@include generateIndentation("app-h-mr", $indentationSteps, margin-right);
 
 @include generateIndentation("app-h-pt", $indentationSteps, padding-top);
 @include generateIndentation("app-h-pr", $indentationSteps, padding-right);
@@ -15,4 +16,9 @@
   .app-h-h#{$i * 5} {
     height: #{$i * 5%};
   }
+}
+
+// *** Display ***
+.app-h-block {
+  display: block !important;
 }
