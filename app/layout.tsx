@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Header from "@/components/Header";
 import { Roboto } from "next/font/google";
 import "@/styles/main.scss";
 
@@ -20,7 +21,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${robotoSans.variable}`}>
-        {children}
+        <Header />
+        <div className="app-l-main">
+          <main className="app-l-container app-h-pt-13">{children}</main>
+        </div>
       </body>
     </html>
   );
