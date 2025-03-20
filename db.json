@@ -1,0 +1,84 @@
+{
+  "orders": [
+    {
+      "orderId": "70692",
+      "orderDate": "13.03.2024",
+      "orderStatus": "Success",
+      "gameName": "Dungeon Run",
+      "gameID": "5998489459",
+      "amount": "76.30"
+    },
+    {
+      "orderId": "20553",
+      "orderDate": "13.12.2024",
+      "orderStatus": "Failed",
+      "gameName": "Shadow Quest",
+      "gameID": "4021510802",
+      "amount": "67.39"
+    },
+    {
+      "orderId": "38248",
+      "orderDate": "11.06.2024",
+      "orderStatus": "Pending",
+      "gameName": "Shadow Quest",
+      "gameID": "8940066085",
+      "amount": "55.34"
+    },
+    {
+      "orderId": "15134",
+      "orderDate": "03.09.2024",
+      "orderStatus": "Pending",
+      "gameName": "Dungeon Run",
+      "gameID": "7998582427",
+      "amount": "56.54"
+    },
+    {
+      "orderId": "42748",
+      "orderDate": "14.06.2024",
+      "orderStatus": "Success",
+      "gameName": "Dungeon Run",
+      "gameID": "5208070589",
+      "amount": "34.08"
+    },
+    {
+      "orderId": "30019",
+      "orderDate": "31.12.2023",
+      "orderStatus": "Pending",
+      "gameName": "Cyber Drive",
+      "gameID": "248947017",
+      "amount": "22.75"
+    },
+    {
+      "orderId": "1066",
+      "orderDate": "13.01.2024",
+      "orderStatus": "Success",
+      "gameName": "Dungeon Run",
+      "gameID": "3632468364",
+      "amount": "92.24"
+    },
+    {
+      "orderId": "31567",
+      "orderDate": "12.01.2024",
+      "orderStatus": "Pending",
+      "gameName": "Galactic War",
+      "gameID": "4933783551",
+      "amount": "43.72"
+    },
+    {
+      "orderId": "5396",
+      "orderDate": "12.03.2024",
+      "orderStatus": "Success",
+      "gameName": "Arcane Realm",
+      "gameID": "2685353682",
+      "amount": "98.91"
+    },
+    {
+      "orderId": "45630",
+      "orderDate": "22.10.2024",
+      "orderStatus": "Pending",
+      "gameName": "Cyber Drive",
+      "gameID": "2414105592",
+      "amount": "57.63"
+    }
+  ]
+}
