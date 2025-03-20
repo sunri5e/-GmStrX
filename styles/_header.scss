@@ -1,0 +1,31 @@
+@use "./variables" as *;
+
+.app-header {
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: fixed;
+  height: $size-base * 13;
+  padding: $size-base * 2 $size-base * 3;
+  display: flex;
+  background: rgba($color-text, 0.08);
+  &__btn {
+    display: flex;
+    padding: $size-base * 2;
+    background: rgba($color-text, 0.04);
+    align-items: center;
+    gap: $size-base;
+    border-radius: $size-base * 8;
+  }
+  &__logo {
+    display: flex;
+    width: $size-base * 20;
+    height: $size-base * 9;
+    background: rgba($color-text, 0.1);
+    border-radius: $size-base * 6;
+  }
+  &-group {
+    display: flex;
+    gap: $size-base * 3;
+  }
+}

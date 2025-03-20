@@ -1,0 +1,18 @@
+@use "_mixins" as *;
+@use "_variables" as *;
+
+@include generateIndentation("app-h-mt", $indentationSteps, margin-top);
+
+@include generateIndentation("app-h-pt", $indentationSteps, padding-top);
+@include generateIndentation("app-h-pr", $indentationSteps, padding-right);
+@include generateIndentation("app-h-ph", $indentationSteps, padding-left padding-right);
+
+// Width and Height
+@for $i from 1 through 20 {
+  .app-h-w#{$i * 5} {
+    width: #{$i * 5%};
+  }
+  .app-h-h#{$i * 5} {
+    height: #{$i * 5%};
+  }
+}
