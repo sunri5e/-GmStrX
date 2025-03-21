@@ -15,8 +15,8 @@ export default function LoginForm({ onSubmit }: { onSubmit: () => void }) {
   } = useForm<LoginFormType>({ mode: "onBlur" });
   const dispatch = useDispatch();
 
-  const submitForm = (data: LoginFormType) => {
-    // dispatch(setUserData({}));
+  const submitForm = () => {
+    dispatch(setUserData({}));
     onSubmit();
   };
 
