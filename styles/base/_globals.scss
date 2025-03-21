@@ -1,4 +1,4 @@
-@use "./variables" as *;
+@use "../utils/variables" as *;
 
 html,
 body {
@@ -30,4 +30,11 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: $color-text;
 }

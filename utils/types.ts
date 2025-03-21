@@ -10,3 +10,9 @@ export interface Order {
 export type OrderStatus = "Pending" | "Success" | "Failed";
 
 export type AuthType = "login" | "signUp";
+
+export type DropdownItem = {
+  value: string;
+  label: string;
+  image: string;
+};

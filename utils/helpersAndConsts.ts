@@ -34,3 +34,14 @@ export const colorMap = {
   Success: "#28A745",
   Failed: "#DC3545",
 };
+
+export const currencyData = [
+  { value: "usd", label: "USD", image: "/usd.svg" },
+  { value: "uah", label: "UAH", image: "/usd.svg" },
+  { value: "eur", label: "EUR", image: "/usd.svg" },
+];
+
+export const countriesData = [
+  { value: "en", label: "EN", image: "/GB.svg" },
+  { value: "ua", label: "UA", image: "/UA.svg" },
+];

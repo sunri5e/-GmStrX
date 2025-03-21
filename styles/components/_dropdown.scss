@@ -1,0 +1,46 @@
+@use "../utils/variables" as *;
+
+.app-dropdown {
+  position: relative;
+  &__control {
+    display: flex;
+    padding: $size-base * 2;
+    background: rgba($color-text, 0.04);
+    align-items: center;
+    gap: $size-base;
+    border-radius: $size-base * 8;
+  }
+  &__content {
+    position: absolute;
+    top: calc(100% + $size-base);
+    left: 0;
+    width: 100%;
+    background: #2c4451;
+    border-radius: $size-base * 3;
+    display: none;
+    &--open {
+      display: block;
+    }
+  }
+  &__item {
+    padding: $size-base * 2;
+    display: flex;
+    align-items: center;
+    gap: $size-base;
+    border-top: 1px solid transparent;
+    & + &:not(.app-dropdown__item--selected) {
+      border-top-color: rgba($color-text-secondary, 0.16);
+    }
+    &:first-child {
+      border-top-left-radius: $size-base * 3;
+      border-top-right-radius: $size-base * 3;
+    }
+    &:last-child {
+      border-bottom-left-radius: $size-base * 3;
+      border-bottom-right-radius: $size-base * 3;
+    }
+    &--selected {
+      background: rgba($color-text-secondary, 0.16);
+    }
+  }
+}

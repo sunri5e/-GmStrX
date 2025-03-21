@@ -1,4 +1,4 @@
-@use "./variables" as *;
+@use "../utils/variables" as *;
 .app-switcher {
   border-radius: $size-base * 5;
   background: rgba($color-text, 0.12);

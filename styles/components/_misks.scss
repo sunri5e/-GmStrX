@@ -1,11 +1,4 @@
-@use "./variables" as *;
-
-button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: $color-text;
-}
+@use "../utils/variables" as *;
 
 .app-status {
   line-height: 1;
