@@ -1,19 +1,23 @@
 import { useForm } from "react-hook-form";
+import { useDispatch } from "react-redux";
+import { setUserData } from "@/store/features/authSlice";
 
 type LoginFormType = {
   email: string;
   password: string;
 };
 
-export default function LoginForm() {
+export default function LoginForm({ onSubmit }: { onSubmit: () => void }) {
   const {
     register,
     handleSubmit,
     formState: { errors, isValid },
   } = useForm<LoginFormType>({ mode: "onBlur" });
+  const dispatch = useDispatch();
 
   const submitForm = (data: LoginFormType) => {
-    console.log(data);
+    // dispatch(setUserData({}));
+    onSubmit();
   };
 
   return (

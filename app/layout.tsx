@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Header from "@/components/Header";
 import { Roboto } from "next/font/google";
+import StoreProvider from "@/components/StoreProvider";
 import "@/styles/main.scss";
 
 const robotoSans = Roboto({
@@ -21,10 +22,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${robotoSans.variable}`}>
-        <Header />
-        <div className="app-l-main">
-          <main className="app-l-container">{children}</main>
-        </div>
+        <StoreProvider>
+          <Header />
+          <div className="app-l-main">
+            <main className="app-l-container">{children}</main>
+          </div>
+        </StoreProvider>
       </body>
     </html>
   );

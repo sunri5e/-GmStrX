@@ -41,7 +41,11 @@ export default function AuthModal({
             <Image src="/close.svg" alt="close" width={24} height={24} />
           </button>
         </div>
-        {localAuthType === "login" ? <LoginForm /> : <SignUpForm />}
+        {localAuthType === "login" ? (
+          <LoginForm onSubmit={() => setIsModalOpen(false)} />
+        ) : (
+          <SignUpForm />
+        )}
         <div className="app-h-text-center app-h-mt-6">
           <p>Use social networks</p>
           <Socials />
