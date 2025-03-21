@@ -7,7 +7,13 @@
       "orderStatus": "Success",
       "gameName": "Dungeon Run",
       "gameID": "5998489459",
-      "amount": "76.30"
+      "amount": "76.30",
+      "details": {
+        "initialGoods": "1,000.00",
+        "currentGoods": "279.99",
+        "change": "+1,500.00",
+        "total": "1,279.99"
+      }
     },
     {
       "id": "20553",
@@ -16,7 +22,13 @@
       "orderStatus": "Failed",
       "gameName": "Shadow Quest",
       "gameID": "4021510802",
-      "amount": "67.39"
+      "amount": "67.39",
+      "details": {
+        "initialGoods": "2,340.50",
+        "currentGoods": "150.00",
+        "change": "-200.00",
+        "total": "2,290.50"
+      }
     },
     {
       "id": "38248",
@@ -25,7 +37,13 @@
       "orderStatus": "Pending",
       "gameName": "Shadow Quest",
       "gameID": "8940066085",
-      "amount": "55.34"
+      "amount": "55.34",
+      "details": {
+        "initialGoods": "500.00",
+        "currentGoods": "320.45",
+        "change": "+100.00",
+        "total": "820.45"
+      }
     },
     {
       "id": "15134",
@@ -34,7 +52,13 @@
       "orderStatus": "Pending",
       "gameName": "Dungeon Run",
       "gameID": "7998582427",
-      "amount": "56.54"
+      "amount": "56.54",
+      "details": {
+        "initialGoods": "3,200.99",
+        "currentGoods": "789.10",
+        "change": "-1,000.00",
+        "total": "2,990.09"
+      }
     },
     {
       "id": "42748",
@@ -43,7 +67,13 @@
       "orderStatus": "Success",
       "gameName": "Dungeon Run",
       "gameID": "5208070589",
-      "amount": "34.08"
+      "amount": "34.08",
+      "details": {
+        "initialGoods": "750.00",
+        "currentGoods": "100.00",
+        "change": "+300.00",
+        "total": "850.00"
+      }
     },
     {
       "id": "30019",
@@ -52,7 +82,13 @@
       "orderStatus": "Pending",
       "gameName": "Cyber Drive",
       "gameID": "248947017",
-      "amount": "22.75"
+      "amount": "22.75",
+      "details": {
+        "initialGoods": "900.00",
+        "currentGoods": "420.75",
+        "change": "+100.00",
+        "total": "1,320.75"
+      }
     },
     {
       "id": "1066",
@@ -61,7 +97,13 @@
       "orderStatus": "Success",
       "gameName": "Dungeon Run",
       "gameID": "3632468364",
-      "amount": "92.24"
+      "amount": "92.24",
+      "details": {
+        "initialGoods": "1,500.00",
+        "currentGoods": "200.00",
+        "change": "-250.00",
+        "total": "1,450.00"
+      }
     },
     {
       "id": "31567",
@@ -70,7 +112,13 @@
       "orderStatus": "Pending",
       "gameName": "Galactic War",
       "gameID": "4933783551",
-      "amount": "43.72"
+      "amount": "43.72",
+      "details": {
+        "initialGoods": "1,100.00",
+        "currentGoods": "399.99",
+        "change": "+50.00",
+        "total": "1,499.99"
+      }
     },
     {
       "id": "5396",
@@ -79,7 +127,13 @@
       "orderStatus": "Success",
       "gameName": "Arcane Realm",
       "gameID": "2685353682",
-      "amount": "98.91"
+      "amount": "98.91",
+      "details": {
+        "initialGoods": "2,000.00",
+        "currentGoods": "310.00",
+        "change": "+500.00",
+        "total": "2,310.00"
+      }
     },
     {
       "id": "45630",
@@ -88,7 +142,13 @@
       "orderStatus": "Pending",
       "gameName": "Cyber Drive",
       "gameID": "2414105592",
-      "amount": "57.63"
+      "amount": "57.63",
+      "details": {
+        "initialGoods": "1,250.00",
+        "currentGoods": "100.00",
+        "change": "-100.00",
+        "total": "1,150.00"
+      }
     }
   ]
 }
