@@ -9,6 +9,11 @@
   border: none;
   background: none;
   cursor: pointer;
+  transition: opacity 0.2s;
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
   &__text {
     position: relative;
   }
@@ -19,7 +24,7 @@
     padding: 0 $size-base * 3;
     height: $size-base * 11;
     background: #fff;
-    &:hover {
+    &:hover:not(:disabled) {
       color: #000;
     }
   }

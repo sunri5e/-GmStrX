@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Socials from "@/components/AuthModal/Socials";
 import Switcher from "@/components/AuthModal/Switcher";
+import LoginForm from "@/components/AuthModal/LoginForm";
+import SignUpForm from "@/components/AuthModal/SignUpForm";
 
 import { AuthType } from "@/utils/types";
 
@@ -39,49 +41,7 @@ export default function AuthModal({
             <Image src="/close.svg" alt="close" width={24} height={24} />
           </button>
         </div>
-        <form className="app-l-flex-col app-l-flex-col__align-center app-h-mt-6">
-          {localAuthType === "login" ? (
-            <>
-              <div className="app-form-group">
-                <input type="text" placeholder="Email" className="app-form-control" />
-              </div>
-              <div className="app-form-group">
-                <input type="password" placeholder="Password" className="app-form-control" />
-              </div>
-            </>
-          ) : (
-            <>
-              <div className="app-form-group">
-                <input type="text" placeholder="Email or Mobile" className="app-form-control" />
-              </div>
-              <div className="app-form-group">
-                <input type="password" placeholder="Password" className="app-form-control" />
-              </div>
-              <div className="app-form-group">
-                <input
-                  type="password"
-                  placeholder="Confirm Password"
-                  className="app-form-control"
-                />
-              </div>
-              <div className="app-h-mt-6">
-                <div className="app-checkbox">
-                  <input type="checkbox" id="useSocial" />
-                  <label htmlFor="useSocial">Use social networks</label>
-                </div>
-              </div>
-            </>
-          )}
-          {localAuthType === "login" ? (
-            <button className="app-btn app-btn--regular app-h-w100 app-h-mt-6">
-              <span className="app-btn__text">Login</span>
-            </button>
-          ) : (
-            <button className="app-btn app-btn--regular app-h-w100 app-h-mt-6">
-              <span className="app-btn__text">Registration</span>
-            </button>
-          )}
-        </form>
+        {localAuthType === "login" ? <LoginForm /> : <SignUpForm />}
         <div className="app-h-text-center app-h-mt-6">
           <p>Use social networks</p>
           <Socials />

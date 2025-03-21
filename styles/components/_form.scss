@@ -32,6 +32,24 @@
       transition: background-color 5000s ease-in-out 0s;
       box-shadow: inset 0 0 100px 100px #111419;
     }
+    &--error {
+      border-color: $color-warning;
+    }
+  }
+  &-error {
+    color: $color-warning;
+    font-size: $fontSize-small;
+    margin-top: $size-base;
+    opacity: 0;
+    transform: translateY(-5px);
+    animation: fadeIn 0.2s ease forwards;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
