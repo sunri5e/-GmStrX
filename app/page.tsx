@@ -53,7 +53,11 @@ export default function Home() {
         </button>
       </div>
       <div className="app-h-mt-10">
-        <Link href="/orders" className="app-btn app-btn--regular app-btn--w100 app-btn--nav">
+        <Link
+          href="/orders"
+          className="app-btn app-btn--regular app-btn--w100 app-btn--nav"
+          aria-label="Orders"
+        >
           <span className="app-btn__text">Orders</span>
         </Link>
       </div>

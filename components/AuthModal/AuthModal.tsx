@@ -51,7 +51,7 @@ export default function AuthModal({
           <p>Use social networks</p>
           <Socials />
           {localAuthType === "login" && (
-            <a href="#" className="app-h-mt-6 app-link">
+            <a href="#" className="app-h-mt-6 app-link" aria-label="Forgot your password">
               Forgot your password?
             </a>
           )}

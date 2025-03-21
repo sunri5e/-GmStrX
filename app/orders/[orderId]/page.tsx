@@ -6,9 +6,7 @@ import BackButton from "@/components/BackButton";
 
 export default async function OrderPage({ params }: { params: Promise<{ orderId: string }> }) {
   const { orderId } = await params;
-  const order = await fetch(`${process.env.NEXT_PUBLIC_DATA_URL}/orders/${orderId}`).then((res) =>
-    res.json(),
-  );
+  const order = await fetch(`${process.env.DATA_URL}/orders/${orderId}`).then((res) => res.json());
   const orderDetails = order.details;
 
   return (

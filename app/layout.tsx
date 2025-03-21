@@ -12,6 +12,7 @@ const robotoSans = Roboto({
 export const metadata: Metadata = {
   title: "Orders App",
   description: "A simple orders app",
+  viewport: "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no",
 };
 
 export default function RootLayout({
