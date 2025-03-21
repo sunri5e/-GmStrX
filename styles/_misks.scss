@@ -1,5 +1,12 @@
 @use "./variables" as *;
 
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: $color-text;
+}
+
 .app-status {
   line-height: 1;
   letter-spacing: 0.3px;
@@ -13,6 +20,15 @@
     height: $size-base * 3;
     border-radius: 50%;
     background: #11b174;
-    border: 2px solid rgba(#fff, 0.24);
+    border: 2px solid rgba($color-text, 0.24);
+  }
+}
+
+.app-socials {
+  display: flex;
+  gap: $size-base * 2;
+  & > * {
+    width: $size-base * 8;
+    height: $size-base * 8;
   }
 }

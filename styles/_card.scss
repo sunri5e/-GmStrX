@@ -27,7 +27,7 @@
         left: 0;
         width: calc(300% + $size-base * 2);
         height: 1px;
-        background: rgba(#fff, 0.1);
+        background: rgba($color-text, 0.1);
       }
     }
     &-label {

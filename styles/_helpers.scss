@@ -7,6 +7,7 @@
 
 @include generateIndentation("app-h-mt", $indentationSteps, margin-top);
 @include generateIndentation("app-h-mr", $indentationSteps, margin-right);
+@include generateIndentation("app-h-ml", $indentationSteps, margin-left);
 
 @include generateIndentation("app-h-pt", $indentationSteps, padding-top);
 @include generateIndentation("app-h-pr", $indentationSteps, padding-right);
@@ -40,6 +41,11 @@
 }
 .app-h-fz-large {
   font-size: $fontSize-large;
+}
+
+// Alignment
+.app-h-text-center {
+  text-align: center;
 }
 
 // Weight

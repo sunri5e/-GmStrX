@@ -8,3 +8,13 @@ h1,
   line-height: 1;
   letter-spacing: 0.6px;
 }
+
+.app-link {
+  color: $color-text-secondary;
+  text-decoration: underline;
+  transition: color 0.3s;
+  display: inline-block;
+  &:hover {
+    text-decoration: none;
+  }
+}

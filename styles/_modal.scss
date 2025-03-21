@@ -1,0 +1,43 @@
+@use "./variables" as *;
+
+.app-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: $size-base * 3;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  &--open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  &__content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: $size-base * 80;
+    border-radius: var(--radius-16, 16px);
+    background: #20242c;
+    padding: $size-base * 4;
+    transform: translateY(-$size-base * 4);
+    transition: transform 0.3s;
+    .app-modal--open & {
+      transform: translateY(0);
+    }
+  }
+  &__backdrop {
+    background: rgba(#000, 0.8);
+    backdrop-filter: blur($size-base * 4);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+}

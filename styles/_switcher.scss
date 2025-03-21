@@ -1,0 +1,35 @@
+@use "./variables" as *;
+.app-switcher {
+  border-radius: $size-base * 5;
+  background: rgba($color-text, 0.12);
+  display: flex;
+  align-items: center;
+  padding: $size-base;
+  width: 100%;
+  position: relative;
+  gap: $size-base;
+  &__item {
+    border-radius: $size-base * 4;
+    padding: $size-base * 2 $size-base * 3;
+    text-align: center;
+    flex: 1;
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s;
+    &--active {
+      color: rgba(0, 0, 0, 0.8);
+    }
+  }
+  &__halo {
+    position: absolute;
+    left: $size-base;
+    top: $size-base;
+    width: calc(50% - $size-base * 1.5);
+    height: calc(100% - $size-base * 2);
+    border-radius: $size-base * 4;
+    background-color: $color-text;
+    transition:
+      left 0.3s,
+      width 0.3s;
+  }
+}

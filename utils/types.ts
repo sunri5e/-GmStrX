@@ -8,3 +8,5 @@ export interface Order {
 }
 
 export type OrderStatus = "Pending" | "Success" | "Failed";
+
+export type AuthType = "login" | "signUp";
