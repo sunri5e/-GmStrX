@@ -1,4 +1,6 @@
 import { useForm } from "react-hook-form";
+import { useDispatch } from "react-redux";
+import { setUserData } from "@/store/features/authSlice";
 
 type SignUpFormType = {
   email: string;
@@ -6,7 +8,7 @@ type SignUpFormType = {
   passwordConfirmation: string;
 };
 
-export default function SignUpForm() {
+export default function SignUpForm({ onSubmit }: { onSubmit: () => void }) {
   const {
     register,
     handleSubmit,
@@ -15,9 +17,11 @@ export default function SignUpForm() {
   } = useForm<SignUpFormType>({ mode: "onBlur" });
 
   const password = watch("password");
+  const dispatch = useDispatch();
 
-  const submitForm = (data: SignUpFormType) => {
-    console.log(data);
+  const submitForm = () => {
+    dispatch(setUserData(true));
+    onSubmit();
   };
   return (
     <form
@@ -27,6 +31,7 @@ export default function SignUpForm() {
       <div className="app-form-group">
         <input
           type="email"
+          autoComplete="off"
           placeholder="Email or Mobile"
           className={`app-form-control ${errors.email ? "app-form-control--error" : ""}`}
           {...register("email", {
@@ -42,6 +47,7 @@ export default function SignUpForm() {
       <div className="app-form-group">
         <input
           type="password"
+          autoComplete="off"
           placeholder="Password"
           className={`app-form-control ${errors.password ? "app-form-control--error" : ""}`}
           {...register("password", {
@@ -57,6 +63,7 @@ export default function SignUpForm() {
       <div className="app-form-group">
         <input
           type="password"
+          autoComplete="off"
           placeholder="Confirm Password"
           className={`app-form-control ${errors.passwordConfirmation ? "app-form-control--error" : ""}`}
           {...register("passwordConfirmation", {

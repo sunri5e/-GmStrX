@@ -1,4 +1,5 @@
 "use client";
+
 import { useState, useEffect } from "react";
 
 import Image from "next/image";
@@ -44,7 +45,7 @@ export default function AuthModal({
         {localAuthType === "login" ? (
           <LoginForm onSubmit={() => setIsModalOpen(false)} />
         ) : (
-          <SignUpForm />
+          <SignUpForm onSubmit={() => setIsModalOpen(false)} />
         )}
         <div className="app-h-text-center app-h-mt-6">
           <p>Use social networks</p>

@@ -16,7 +16,7 @@ export default function LoginForm({ onSubmit }: { onSubmit: () => void }) {
   const dispatch = useDispatch();
 
   const submitForm = () => {
-    dispatch(setUserData({}));
+    dispatch(setUserData(true));
     onSubmit();
   };
 
@@ -28,6 +28,7 @@ export default function LoginForm({ onSubmit }: { onSubmit: () => void }) {
       <div className="app-form-group">
         <input
           type="email"
+          autoComplete="off"
           placeholder="Email"
           className={`app-form-control ${errors.email ? "app-form-control--error" : ""}`}
           {...register("email", {
@@ -43,6 +44,7 @@ export default function LoginForm({ onSubmit }: { onSubmit: () => void }) {
       <div className="app-form-group">
         <input
           type="password"
+          autoComplete="off"
           placeholder="Password"
           className={`app-form-control ${errors.password ? "app-form-control--error" : ""}`}
           {...register("password", {

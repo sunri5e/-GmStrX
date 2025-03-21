@@ -9,6 +9,7 @@
     align-items: center;
     gap: $size-base;
     border-radius: $size-base * 8;
+    cursor: pointer;
   }
   &__content {
     position: absolute;
@@ -28,6 +29,7 @@
     align-items: center;
     gap: $size-base;
     border-top: 1px solid transparent;
+    cursor: pointer;
     & + &:not(.app-dropdown__item--selected) {
       border-top-color: rgba($color-text-secondary, 0.16);
     }

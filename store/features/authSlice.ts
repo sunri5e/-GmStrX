@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   isUserLogged: false,
+  toastWasShown: false,
 };
 
 const authSlice = createSlice({
@@ -9,10 +10,13 @@ const authSlice = createSlice({
   initialState,
   reducers: {
     setUserData: (state, action) => {
-      state.isUserLogged = true;
+      state.isUserLogged = action.payload;
+    },
+    setToastState: (state, action) => {
+      state.toastWasShown = action.payload;
     },
   },
 });
 
-export const { setUserData } = authSlice.actions;
+export const { setUserData, setToastState } = authSlice.actions;
 export default authSlice.reducer;
