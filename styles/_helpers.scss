@@ -1,6 +1,10 @@
 @use "_mixins" as *;
 @use "_variables" as *;
 
+.app-h-color-secondary {
+  color: $color-text-secondary;
+}
+
 @include generateIndentation("app-h-mt", $indentationSteps, margin-top);
 @include generateIndentation("app-h-mr", $indentationSteps, margin-right);
 
@@ -21,4 +25,35 @@
 // *** Display ***
 .app-h-block {
   display: block !important;
+}
+
+// *** Text formatting ***
+// Size
+.app-h-fz-why1 {
+  font-size: $fontSize-why1;
+}
+.app-h-fz-larger {
+  font-size: $fontSize-larger;
+}
+.app-h-fz-why2 {
+  font-size: $fontSize-why2;
+}
+.app-h-fz-large {
+  font-size: $fontSize-large;
+}
+
+// Weight
+.app-h-bold {
+  font-weight: $fontWeight-bold;
+}
+
+// Decoration
+.app-h-line-through {
+  text-decoration: line-through;
+}
+.app-h-line-halo {
+  display: inline-flex;
+  padding: $size-base * 2;
+  background: rgba($color-text, 0.12);
+  border-radius: $size-base * 4;
 }

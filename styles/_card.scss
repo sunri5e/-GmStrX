@@ -5,9 +5,14 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: $size-base * 6 $size-base;
-  border-radius: var(--radius-16, 16px);
+  border-radius: $size-base * 4;
   background: #1f242c;
   line-height: 1;
+  &--illustrated {
+    padding: 0;
+    grid-template-columns: 88px 1fr;
+    grid-gap: $size-base * 3;
+  }
   &__item {
     display: flex;
     flex-direction: column;
@@ -30,5 +35,15 @@
       color: $color-text-secondary;
       letter-spacing: 0.3px;
     }
+  }
+  &__image {
+    border-top-left-radius: $size-base * 4;
+    border-bottom-left-radius: $size-base * 4;
+  }
+  &__content {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: $size-base * 2;
   }
 }

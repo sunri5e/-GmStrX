@@ -6,7 +6,7 @@ import BackButton from "@/components/BackButton";
 
 export default async function Orders() {
   let orders: Order[] = [];
-  await fetch("https://my-json-server.typicode.com/sunri5e/-GmStrX/orders")
+  await fetch(`${process.env.DATA_URL}/orders`)
     .then((res) => res.json())
     .then((data) => {
       orders = data;
